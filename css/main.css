@@ -2,6 +2,10 @@
   font-family: Poppins;
   src: url(../fonts/Poppins/Poppins-Regular.ttf);
 }
+@font-face {
+  font-family: Poppins-Bold;
+  src: url(../fonts/Poppins/Poppins-Bold.ttf);
+}
 body {
   font-family: Poppins, sans-serif;
   font-style: normal;
@@ -380,6 +384,7 @@ label .close {
 }
 .main-container .container-1 .container-1-1 .title {
   font-weight: 700;
+  font-family: Poppins-Bold, sans-serif;
   font-size: 2.9166666667vw;
   line-height: 3.75vw;
   display: flex;

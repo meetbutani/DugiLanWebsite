@@ -3,10 +3,14 @@ $PrimaryBlue60: #E7F7FD;
 $SecondaryPurple100: #33334F;
 $MainMargin: 12.5vw; // 240px
 
-
 @font-face {
     font-family: Poppins;
     src: url(../fonts/Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+    font-family: Poppins-Bold;
+    src: url(../fonts/Poppins/Poppins-Bold.ttf);
 }
 
 body {
@@ -423,6 +427,7 @@ label .close {
 
             .title {
                 font-weight: 700;
+                font-family: Poppins-Bold, sans-serif;
                 font-size: 2.9166666666666665vw;
                 line-height: 3.75vw;
                 display: flex;

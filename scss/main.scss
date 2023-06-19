@@ -100,6 +100,7 @@ label .close {
         }
 
         .input {
+            display: none;
             width: 110px;
             background-color: transparent;
             border: none;
@@ -141,6 +142,36 @@ label .close {
 
     .shopping-bag {
         margin-left: 28px;
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        padding-bottom: 7px;
+        padding-right: 3px;
+
+        img {
+            width: 24px;
+            height: 24px;
+        }
+
+        .count {
+            width: 16px;
+            height: 16px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 16px;
+            letter-spacing: 0.2px;
+            color: #FFFFFF;
+            border-radius: 100%;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
     }
 }
 
@@ -175,6 +206,7 @@ label .close {
             border-radius: 0px 0px 10px 10px;
             display: flex;
             flex-direction: column;
+            row-gap: 1px;
 
             .categoryitem {
                 width: 100%;
@@ -212,8 +244,9 @@ label .close {
             text-align: center;
             letter-spacing: 0.1px;
             color: #12151A;
+            margin-bottom: 20px;
         }
-
+        
         .description {
             width: 100%;
             font-weight: 400;
@@ -224,6 +257,7 @@ label .close {
             text-align: center;
             letter-spacing: 0.3px;
             color: #12151A;
+            margin-bottom: 25px;
         }
 
         .input-div {
@@ -254,6 +288,7 @@ label .close {
                 color: #717184;
                 outline: none;
                 border: none;
+                padding: 0;
             }
         }
 
@@ -306,6 +341,7 @@ label .close {
                 width: fit-content;
                 position: absolute;
 
+                font-family: Poppins-Bold, sans-serif;
                 font-weight: 700;
                 font-size: 32px;
                 line-height: 40px;
@@ -318,6 +354,8 @@ label .close {
         }
 
         .title {
+            height: 29px;
+            // font-family: Poppins-Bold, sans-serif;
             font-weight: 600;
             font-size: 20px;
             line-height: 26px;
@@ -330,6 +368,7 @@ label .close {
         }
 
         .user-count {
+            height: 44px;
             font-weight: 700;
             font-size: 32px;
             line-height: 40px;
@@ -439,6 +478,7 @@ label .close {
 
             .search-div {
                 width: 100%;
+                // min-width: 513px;
                 margin: 30px 0;
 
                 .input {
@@ -472,7 +512,7 @@ label .close {
                     border: none;
                     background: #0FAFE9;
                     border-radius: 0px 5px 5px 0px;
-                    padding: 17px 30px;
+                    padding: 17px 30px 17px 36px;
                 }
             }
 
@@ -560,7 +600,7 @@ label .close {
             display: flex;
             flex-direction: row;
             justify-content: space-between;
-            column-gap: 20px;
+            column-gap: 35px;
             flex-wrap: wrap;
 
             .img-size {
@@ -970,6 +1010,11 @@ footer {
             display: flex;
             flex-direction: row;
             gap: 10px;
+            
+            img {
+                width: 18px;
+                height: 18px;
+            }
         }
     }
 }
@@ -1036,6 +1081,14 @@ footer {
 @media (min-width: 1199.6px) {
     .left-side {
         width: 17.552083333333332vw;
+    }
+
+    #leftsidebar {
+        display: none;
+    }
+
+    .offcanvas-backdrop.fade.show {
+        display: none;
     }
 }
 
@@ -2661,7 +2714,13 @@ footer {
     }
 }
 
-@media (min-width: 1399.99px) {
+@media (min-width: 1900.5px) {
+    .search-div {
+        min-width: 513px;
+    }
+}
+
+@media (min-width: 1399.99px) and (max-width: 1900px) {
     .container-1 {
         width: 100%;
         margin-top: 9.635416666666668vw; // 185px
@@ -2749,7 +2808,7 @@ footer {
 @media (min-width: 1549.99px) {
 
     .banner {
-        padding: 21px 0 !important;
+        padding-top: 21px !important;
         padding-left: $MainMargin !important;
         padding-right: 6.458333333333334vw !important;
         margin-top: 5.208333333333334vw; //100px
@@ -2797,7 +2856,7 @@ footer {
             width: 51.87500000000001vw;
             height: 28.3vw; //29.479166666666668vw;
             overflow: hidden;
-            margin-top: 5.104166666666667vw;
+            margin-top: 3.055vw;
             margin-left: 1.09375vw;
             position: relative;
             // right: 0;

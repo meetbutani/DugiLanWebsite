@@ -89,6 +89,7 @@ label .close {
   padding: 0;
 }
 .header .search .input {
+  display: none;
   width: 110px;
   background-color: transparent;
   border: none;
@@ -124,6 +125,32 @@ label .close {
 }
 .header .shopping-bag {
   margin-left: 28px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  padding-bottom: 7px;
+  padding-right: 3px;
+}
+.header .shopping-bag img {
+  width: 24px;
+  height: 24px;
+}
+.header .shopping-bag .count {
+  width: 16px;
+  height: 16px;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  letter-spacing: 0.2px;
+  color: #FFFFFF;
+  border-radius: 100%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 .left-side {
@@ -155,6 +182,7 @@ label .close {
   border-radius: 0px 0px 10px 10px;
   display: flex;
   flex-direction: column;
+  row-gap: 1px;
 }
 .left-side .categories .categoryitems .categoryitem {
   width: 100%;
@@ -188,6 +216,7 @@ label .close {
   text-align: center;
   letter-spacing: 0.1px;
   color: #12151A;
+  margin-bottom: 20px;
 }
 .left-side .newsletter .description {
   width: 100%;
@@ -199,6 +228,7 @@ label .close {
   text-align: center;
   letter-spacing: 0.3px;
   color: #12151A;
+  margin-bottom: 25px;
 }
 .left-side .newsletter .input-div {
   width: 100%;
@@ -227,6 +257,7 @@ label .close {
   color: #717184;
   outline: none;
   border: none;
+  padding: 0;
 }
 .left-side .newsletter #submit {
   width: 100%;
@@ -274,6 +305,7 @@ label .close {
   width: -moz-fit-content;
   width: fit-content;
   position: absolute;
+  font-family: Poppins-Bold, sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -284,6 +316,7 @@ label .close {
   color: #0FAFE9;
 }
 .left-side .monthly-user .title {
+  height: 29px;
   font-weight: 600;
   font-size: 20px;
   line-height: 26px;
@@ -295,6 +328,7 @@ label .close {
   margin-top: 20px;
 }
 .left-side .monthly-user .user-count {
+  height: 44px;
   font-weight: 700;
   font-size: 32px;
   line-height: 40px;
@@ -425,7 +459,7 @@ label .close {
   border: none;
   background: #0FAFE9;
   border-radius: 0px 5px 5px 0px;
-  padding: 17px 30px;
+  padding: 17px 30px 17px 36px;
 }
 .main-container .container-1 .container-1-1 .description {
   font-weight: 400;
@@ -499,8 +533,8 @@ label .close {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  -moz-column-gap: 20px;
-       column-gap: 20px;
+  -moz-column-gap: 35px;
+       column-gap: 35px;
   flex-wrap: wrap;
 }
 .main-container .container-2 .container-2-1 .img-size {
@@ -851,6 +885,10 @@ footer .footerbottom .social {
   flex-direction: row;
   gap: 10px;
 }
+footer .footerbottom .social img {
+  width: 18px;
+  height: 18px;
+}
 
 @media (max-width: 1399.5px) {
   .rmw-auto {
@@ -902,6 +940,12 @@ footer .footerbottom .social {
 @media (min-width: 1199.6px) {
   .left-side {
     width: 17.5520833333vw;
+  }
+  #leftsidebar {
+    display: none;
+  }
+  .offcanvas-backdrop.fade.show {
+    display: none;
   }
 }
 @media (max-width: 575.98px) {
@@ -2039,7 +2083,12 @@ footer .footerbottom .social {
     background: linear-gradient(223.45deg, #FFFFFF -22.5%, rgba(255, 255, 255, 0) 57.85%);
   }
 }
-@media (min-width: 1399.99px) {
+@media (min-width: 1900.5px) {
+  .search-div {
+    min-width: 513px;
+  }
+}
+@media (min-width: 1399.99px) and (max-width: 1900px) {
   .container-1 {
     width: 100%;
     margin-top: 9.6354166667vw;
@@ -2097,7 +2146,7 @@ footer .footerbottom .social {
 }
 @media (min-width: 1549.99px) {
   .banner {
-    padding: 21px 0 !important;
+    padding-top: 21px !important;
     padding-left: 12.5vw !important;
     padding-right: 6.4583333333vw !important;
     margin-top: 5.2083333333vw;
@@ -2109,7 +2158,7 @@ footer .footerbottom .social {
     width: 51.875vw;
     height: 28.3vw;
     overflow: hidden;
-    margin-top: 5.1041666667vw;
+    margin-top: 3.055vw;
     margin-left: 1.09375vw;
     position: relative;
   }
